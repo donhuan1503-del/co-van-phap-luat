@@ -1,6 +1,6 @@
 /* Cố vấn Pháp luật VN - Ngân hàng luyện tập: TOPICS, QUIZ (câu viết tay + câu SINH TỰ ĐỘNG từ bảng mốc thời gian và con số),
    DK rỗng. Con số lấy từ văn bản đã đọc (Luật 76/2025, NĐ 274/2025, NĐ 283/2026) hoặc kiến thức ổn định; mục nên đối chiếu ghi trong phần giải thích. */
-var TOPICS = {ds:"Luật dân sự",dn:"Luật doanh nghiệp",tm:"Thương mại, cạnh tranh, trọng tài",dt:"Luật đầu tư",dd:"Đất đai, nhà ở, bất động sản",ld:"Lao động, BHXH",hs:"Hình sự và tố tụng hình sự",hc:"Hành chính, xử phạt, khiếu nại",td:"Tố tụng dân sự, thi hành án",hn:"Hôn nhân gia đình, thừa kế",sh:"Sở hữu trí tuệ",ps:"Phá sản",th:"Luật thuế",hp:"Hiến pháp, ban hành văn bản"};
+var TOPICS = {ds:"Luật dân sự",dn:"Luật doanh nghiệp",tm:"Thương mại, cạnh tranh, trọng tài",dt:"Luật đầu tư",dd:"Đất đai, nhà ở, bất động sản",ld:"Lao động, BHXH",hs:"Hình sự và tố tụng hình sự",hc:"Hành chính, xử phạt, khiếu nại",td:"Tố tụng dân sự, thi hành án",hn:"Hôn nhân gia đình, thừa kế",sh:"Sở hữu trí tuệ",ps:"Phá sản",th:"Luật thuế",hq:"Hải quan",dth:"Đấu thầu, đầu tư công, PPP",hp:"Hiến pháp, ban hành văn bản"};
 var QUIZ = [];
 var DK = [];
 (function(){

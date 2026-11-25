@@ -1,7 +1,7 @@
 "use strict";
 /* ===== Cố vấn Chuyên gia VN - lõi ứng dụng ===== */
 var AS_OF = "11/2026";
-var DOMAINS = {ds:"Luật dân sự",dn:"Luật doanh nghiệp",tm:"Luật thương mại - cạnh tranh - trọng tài",dt:"Luật đầu tư",dd:"Luật đất đai - nhà ở - bất động sản",ld:"Luật lao động - BHXH",hs:"Luật hình sự và tố tụng hình sự",hc:"Luật hành chính - xử phạt - khiếu nại",td:"Tố tụng dân sự - thi hành án",hn:"Hôn nhân gia đình - thừa kế",sh:"Sở hữu trí tuệ",ps:"Phá sản",th:"Luật thuế",hp:"Hiến pháp - ban hành văn bản - nhà nước"};
+var DOMAINS = {ds:"Luật dân sự",dn:"Luật doanh nghiệp",tm:"Luật thương mại - cạnh tranh - trọng tài",dt:"Luật đầu tư",dd:"Luật đất đai - nhà ở - bất động sản",ld:"Luật lao động - BHXH",hs:"Luật hình sự và tố tụng hình sự",hc:"Luật hành chính - xử phạt - khiếu nại",td:"Tố tụng dân sự - thi hành án",hn:"Hôn nhân gia đình - thừa kế",sh:"Sở hữu trí tuệ",ps:"Phá sản",th:"Luật thuế",hq:"Hải quan",dth:"Đấu thầu, đầu tư công, PPP",hp:"Hiến pháp - ban hành văn bản - nhà nước"};
 
 /* ---------- tiện ích ---------- */
 function $(id){return document.getElementById(id);}
@@ -14,7 +14,7 @@ var STOP={la:1,va:1,cua:1,cho:1,the:1,nao:1,gi:1,co:1,khong:1,bao:1,nhieu:1,duoc
 function tokens(s){return strip(s).split(/[^a-z0-9]+/).filter(function(w){return w.length>1&&!STOP[w];});}
 
 /* ---------- chuẩn bị kho kiến thức ---------- */
-var TOPIC_OF=[[/^ds_/,"ds"],[/^dn_/,"dn"],[/^tm_/,"tm"],[/^dt_/,"dt"],[/^dd_/,"dd"],[/^ld_/,"ld"],[/^hs_/,"hs"],[/^hc_/,"hc"],[/^td_/,"td"],[/^hn_/,"hn"],[/^sh_/,"sh"],[/^ps_/,"ps"],[/^th_/,"th"],[/^hp_/,"hp"]];
+var TOPIC_OF=[[/^ds_/,"ds"],[/^dn_/,"dn"],[/^tm_/,"tm"],[/^dt_/,"dt"],[/^dd_/,"dd"],[/^ld_/,"ld"],[/^hs_/,"hs"],[/^hc_/,"hc"],[/^td_/,"td"],[/^hn_/,"hn"],[/^sh_/,"sh"],[/^ps_/,"ps"],[/^th_/,"th"],[/^hq_/,"hq"],[/^dth_/,"dth"],[/^hp_/,"hp"]];
 KB.forEach(function(c){
   if(c.sec){c.body=[];c.sec.forEach(function(s){s.l.forEach(function(x){c.body.push(x);});});}
   c.topic=null;TOPIC_OF.some(function(r){if(r[0].test(c.id)){c.topic=r[1];return true;}return false;});
@@ -127,7 +127,9 @@ var THEMES=[
  {k:"hn",n:"10. Hôn nhân gia đình, thừa kế",t:/^hn_/},
  {k:"sh",n:"11. Sở hữu trí tuệ",t:/^sh_/},
  {k:"ps",n:"12. Phá sản",t:/^ps_/},
- {k:"th",n:"13. Luật thuế",t:/^th_/},
+ {k:"th",n:"13. Luật thuế (QLT, GTGT, TNDN, TNCN, xuất nhập khẩu)",t:/^th_/},
+ {k:"hq",n:"13b. Hải quan",t:/^hq_/},
+ {k:"dth",n:"13c. Đấu thầu, đầu tư công, PPP",t:/^dth_/},
  {k:"hp",n:"14. Hiến pháp, ban hành văn bản, bản đồ luật mới",t:/^hp_/}
 ];
 function themeOf(c){for(var i=0;i<THEMES.length;i++)if(THEMES[i].t.test(c.id))return i;return THEMES.length;}
@@ -566,7 +568,7 @@ function simSkip(){if(simCur.fb)return;simCur.res.push(null);simCur.i++;simRende
 
 /* ---------- Tab: Văn bản gốc (toàn văn bản hợp nhất từ Công báo, tải từng luật khi mở) ---------- */
 var VBDATA={};function VB_LOAD(k,o){VBDATA[k]=o;}
-var VB_GROUP={ke:"Kế toán, kiểm toán",dn:"Doanh nghiệp, thương mại, đầu tư",ld:"Lao động, bảo hiểm xã hội",dd:"Đất đai, nhà ở, công chứng",ds:"Dân sự, hôn nhân gia đình",hs:"Hình sự",td:"Tố tụng dân sự, thi hành án",hc:"Hành chính, khiếu nại, tố cáo",th:"Thuế, phí, ngân sách"};
+var VB_GROUP={ke:"Kế toán, kiểm toán",dn:"Doanh nghiệp, thương mại, đầu tư",ld:"Lao động, bảo hiểm xã hội",dd:"Đất đai, nhà ở, công chứng",ds:"Dân sự, hôn nhân gia đình",hs:"Hình sự",td:"Tố tụng dân sự, thi hành án",hc:"Hành chính, khiếu nại, tố cáo",dt:"Đầu tư, đầu tư công, đấu thầu, hải quan",th:"Thuế, phí, ngân sách, giá, nợ công"};
 var vbKey="",vbQ="",vbOpen={};
 function viewVb(){
   var idx=window.VB_INDEX||[];

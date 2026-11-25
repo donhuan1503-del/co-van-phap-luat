@@ -1,7 +1,7 @@
 /* Service worker: chạy offline. Dữ liệu văn bản mới luôn ưu tiên lấy từ mạng/máy chủ. */
-var CACHE = "luat-vn-v5";
+var CACHE = "luat-vn-v6";
 var SHELL = ["./","index.html","style.css","app.js","manifest.webmanifest","icon.svg",
- "data/kb_luat_dansu_dn_tm.js","data/kb_luat_dat_dt_ld.js","data/kb_luat_hs_hc_td_khac.js","data/practice_luat.js","data/practice_luat2.js","data/practice_luat3.js","data/practice_luat4.js","data/kb_luat_ld_da_doc.js","data/kb_luat_da_doc.js","data/sim_luat.js","data/sim_luat2.js","data/vb_index.js","data/updates.js"];
+ "data/kb_luat_dansu_dn_tm.js","data/kb_luat_dat_dt_ld.js","data/kb_luat_hs_hc_td_khac.js","data/practice_luat.js","data/practice_luat2.js","data/practice_luat3.js","data/practice_luat4.js","data/kb_luat_ld_da_doc.js","data/kb_luat_da_doc.js","data/sim_luat.js","data/sim_luat2.js","data/kb_luat_thue_hq_dauthau.js","data/practice_luat5.js","data/sim_luat3.js","data/vb_index.js","data/updates.js"];
 self.addEventListener("install", function(e){
   e.waitUntil(caches.open(CACHE).then(function(c){return c.addAll(SHELL);}).then(function(){return self.skipWaiting();}));
 });
