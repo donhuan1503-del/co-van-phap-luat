@@ -125,7 +125,7 @@ KB.push.apply(KB,[
    }
   ],
   "ex": "Doanh nghiệp năm trước doanh thu 2,6 tỷ, năm nay 4,2 tỷ, thu nhập tính thuế 600 triệu: thuế suất tạm tính năm nay dùng doanh thu năm liền trước 2,6 tỷ nên 15% (Điều 10 khoản 3); thuế = 90 triệu.",
-  "warn": "Điều 4 khoản 14a chỉ nêu nguyên tắc, mức doanh thu do Chính phủ quy định (nghị định); đối chiếu NĐ 320/2025, NĐ 141/2026 để biết ngưỡng chính xác. Điều kiện chứng từ thanh toán không dùng tiền mặt (ngưỡng 5 triệu đồng) nằm ở nghị định, TT 20/2026.",
+  "warn": "Điều 4 khoản 14a chỉ nêu nguyên tắc; mức 01 tỷ đồng do NĐ 141/2026 bổ sung khoản 15 Điều 4 NĐ 320/2025 (doanh thu năm trước liền kề, xem thẻ Thuế 7, đã đối chiếu nguyên văn). Điều kiện chứng từ thanh toán không dùng tiền mặt (ngưỡng 5 triệu đồng) nằm ở nghị định, TT 20/2026.",
   "tip": "Lập bảng điều chỉnh cuối năm theo đúng thứ tự Điều 9 khoản 2 (điểm a đến q) để không bỏ sót khoản bị loại.",
   "q": "Liệt kê 5 khoản chi không được trừ theo Điều 9 khoản 2 Luật TNDN 67/2025 và cho biết thời hạn chuyển lỗ.",
   "chk": [
@@ -178,7 +178,7 @@ KB.push.apply(KB,[
    }
   ],
   "ex": "Lương 40 triệu/tháng, BH bắt buộc 4,2 triệu, một người phụ thuộc: 40 - 4,2 - 15,5 - 6,2 = 14,1 triệu → thuế = 10 × 5% + 4,1 × 10% = 0,91 triệu đồng.",
-  "warn": "Mức doanh thu miễn thuế của hộ, cá nhân kinh doanh và cách khấu trừ tạm thời tháng 1-6/2026 do nghị định, thông tư quy định (NĐ 253/2026, các văn bản liên quan); phần đó chưa nằm trong VBHN.",
+  "warn": "Mức doanh thu miễn thuế của hộ, cá nhân kinh doanh: 01 tỷ đồng theo NĐ 68/2026 đã sửa bởi NĐ 141/2026 (xem thẻ Thuế 7, đã đối chiếu nguyên văn). Cách khấu trừ tạm thời tháng 1-6/2026 do NĐ 253/2026 quy định (chưa đọc nguyên văn).",
   "tip": "Máy tính trong app dùng biểu 5 bậc cho kỳ tính thuế 2026; khi so với quyết toán 2025 hãy chọn biểu cũ 7 bậc.",
   "q": "Hộ kinh doanh bán hàng hóa doanh thu 2,4 tỷ chọn tính thuế TNCN theo doanh thu: tỷ lệ nào, tính trên phần nào?",
   "chk": [
