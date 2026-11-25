@@ -43,12 +43,12 @@ KB.push(
  chk:["06 thang","12 thang","khien trach","sa thai","phat tien"]},
 
 {id:"ld_9",d:"ld",t:"Lao động 9 - Thời giờ làm việc, làm thêm, nghỉ phép, thai sản",conf:1,v:"11/2026",
- law:"Điều 98, 105, 106, 107, 112, 113, 139 BLLĐ 2019",
+ law:"Điều 98, 105, 106, 107, 112, 113, 139 BLLĐ 2019 (đối chiếu VBHN 18/VBHN-VPQH, Công báo 131, 28/02/2026)",
  sec:[
  {h:"Thời giờ (Điều 105-107)",l:["Bình thường không quá 08 giờ/ngày và 48 giờ/tuần; làm ban đêm từ 22 giờ đến 06 giờ.","Làm thêm cần sự đồng ý của người lao động; không quá 50% giờ bình thường trong ngày; tổng giờ làm thêm tối đa 40 giờ/tháng và 200 giờ/năm; một số ngành (dệt may, da giày, điện tử, chế biến nông lâm thủy sản, điện, viễn thông...) tối đa 300 giờ/năm và phải thông báo bằng văn bản cho cơ quan quản lý lao động cấp tỉnh."]},
  {h:"Tiền lương làm thêm, ban đêm (Điều 98)",l:["Ngày thường 150%; ngày nghỉ hằng tuần 200%; ngày lễ, tết, ngày nghỉ hưởng lương 300% (chưa kể lương ngày lễ với người hưởng lương ngày).","Ban đêm trả thêm ít nhất 30%; làm thêm ban đêm trả thêm 20% lương ngày."]},
  {h:"Nghỉ lễ, nghỉ phép (Điều 112-113)",l:["Tết dương lịch 01 ngày; Tết âm lịch 05 ngày; 30/4 và 1/5 mỗi dịp 01 ngày; Quốc khánh 02 ngày; Giỗ Tổ 01 ngày.","Nghỉ phép năm sau đủ 12 tháng: 12 ngày (bình thường); 14 ngày (chưa thành niên, khuyết tật, nặng nhọc độc hại); 16 ngày (đặc biệt nặng nhọc); chưa đủ 12 tháng theo tỷ lệ tháng; thôi việc chưa nghỉ hết thì thanh toán lương."]},
- {h:"Thai sản (Điều 139)",l:["Nghỉ 06 tháng trước và sau sinh (trước sinh không quá 02 tháng); sinh đôi trở lên mỗi con thứ hai trở đi thêm 01 tháng.","Đi làm sớm khi đã nghỉ ít nhất 04 tháng, báo trước, được công ty đồng ý và có xác nhận của cơ sở khám bệnh."]}
+ {h:"Thai sản (Điều 139)",l:["Nghỉ 06 tháng trước và sau sinh; từ 01/7/2026 (Luật Dân số 113/2025) sinh con thứ hai nghỉ 07 tháng; thời gian nghỉ trước sinh không quá 02 tháng; sinh đôi trở lên mỗi con từ con thứ hai trở đi nghỉ thêm 01 tháng.","Đi làm sớm khi đã nghỉ ít nhất 04 tháng, báo trước, được công ty đồng ý và có xác nhận của cơ sở khám bệnh."]}
  ],
  ex:"Nhân viên làm tăng ca vào Chủ nhật 4 giờ, lương giờ 40.000 đồng: tiền làm thêm tối thiểu 4 × 40.000 × 200% = 320.000 đồng.",
  warn:"Tính tổng giờ làm thêm theo tháng và năm cho từng người; vượt giới hạn bị xử phạt theo NĐ 283/2026.",
@@ -74,7 +74,7 @@ KB.push(
  law:"Luật BHXH 41/2024/QH15: Điều 43, 45, 50, 53, 59, 64, 66, 70, 85",
  sec:[
  {h:"Ốm đau (Điều 43, 45)",l:["Tối đa trong năm (ngày làm việc): 30 ngày nếu đã đóng dưới 15 năm; 40 ngày từ 15 đến dưới 30 năm; 60 ngày từ 30 năm trở lên (điều kiện bình thường); nặng nhọc độc hại 40, 50, 70 ngày.","Mức hưởng 75% tiền lương làm căn cứ đóng của tháng gần nhất trước khi nghỉ (khoản 2 Điều 45)."]},
- {h:"Thai sản (Điều 50, 53, 59)",l:["Điều kiện sinh con: đóng BHXH bắt buộc từ đủ 06 tháng trong 12 tháng liền kề trước sinh; nghỉ dưỡng thai theo chỉ định thì cần đóng đủ 12 tháng và 03 tháng trong 12 tháng trước sinh.","Lao động nam có vợ sinh: 05 ngày làm việc; 07 ngày nếu vợ phẫu thuật hoặc sinh dưới 32 tuần; sinh đôi 10 ngày; sinh đôi phẫu thuật 14 ngày; mỗi con từ thứ ba thêm 03 ngày; bắt đầu nghỉ trong 60 ngày kể từ ngày sinh.","Trợ cấp tháng bằng 100% bình quân lương đóng của 06 tháng gần nhất; ngày chia 24 hoặc 30 theo từng trường hợp."]},
+ {h:"Thai sản (Điều 50, 53, 59)",l:["Điều kiện sinh con: đóng BHXH bắt buộc từ đủ 06 tháng trong 12 tháng liền kề trước sinh; nghỉ dưỡng thai theo chỉ định thì cần đóng đủ 12 tháng và 03 tháng trong 12 tháng trước sinh.","Lao động nam có vợ sinh: 05 ngày làm việc; 07 ngày nếu vợ phẫu thuật hoặc sinh dưới 32 tuần; vợ sinh đôi hoặc sinh con thứ hai (theo bản hợp nhất 2026) 10 ngày; sinh đôi phẫu thuật 14 ngày; mỗi con từ thứ ba thêm 03 ngày; bắt đầu nghỉ trong 60 ngày kể từ ngày sinh.","Trợ cấp tháng bằng 100% bình quân lương đóng của 06 tháng gần nhất; ngày chia 24 hoặc 30 theo từng trường hợp."]},
  {h:"Hưu trí (Điều 64, 66)",l:["Đủ tuổi nghỉ hưu theo Điều 169 BLLĐ và có từ đủ 15 năm đóng BHXH bắt buộc.","Nữ: 45% bình quân lương tương ứng 15 năm, mỗi năm thêm 2%, tối đa 75%. Nam: 45% tương ứng 20 năm, mỗi năm thêm 2%; nam từ đủ 15 đến dưới 20 năm: 40% tương ứng 15 năm, mỗi năm thêm 1%.","Nghỉ hưu sớm khi suy giảm khả năng lao động: mỗi năm nghỉ trước tuổi giảm 2%."]},
  {h:"BHXH một lần, mai táng (Điều 70, 85)",l:["Một lần khi đủ tuổi hưu mà chưa đủ 15 năm đóng (có thể chọn trợ cấp hằng tháng theo Điều 23), ra nước ngoài định cư, bệnh hiểm nghèo, suy giảm khả năng lao động từ 81% trở lên và các trường hợp luật nêu.","Trợ cấp mai táng cho đối tượng có đóng từ đủ 12 tháng, chết do tai nạn lao động, bệnh nghề nghiệp hoặc đang hưởng lương hưu."]}
  ],

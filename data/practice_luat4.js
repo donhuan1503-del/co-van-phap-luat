@@ -54,7 +54,8 @@ Q("ld","Người lao động không hưởng lương từ bao nhiêu ngày làm 
 Q("ld","Thời hạn chậm nhất người sử dụng lao động đóng BHXH hằng tháng:","Ngày cuối cùng của tháng tiếp theo",["Ngày 10 tháng sau","Ngày cuối cùng của tháng đó","Ngày 15 tháng sau"],"Điều 34 khoản 4 điểm a.");
 Q("ld","Sau bao nhiêu ngày không đăng ký hoặc đăng ký thiếu người tham gia BHXH thì bị coi là TRỐN đóng?","Sau 60 ngày kể từ ngày hết thời hạn đăng ký",["Sau 07 ngày","Sau 30 ngày","Sau 90 ngày"],"Điều 38, 39 Luật BHXH 2024.");
 Q("ld","Điều kiện hưởng chế độ thai sản khi sinh con (thông thường):","Đóng BHXH bắt buộc từ đủ 06 tháng trong 12 tháng liền kề trước khi sinh",["Đóng từ đủ 12 tháng liên tục","Đóng từ đủ 03 tháng trong 12 tháng","Không cần điều kiện đóng"],"Điều 50 khoản 2.");
-Q("ld","Lao động nam có vợ sinh con (sinh thường) được nghỉ thai sản:","05 ngày làm việc",["03 ngày","07 ngày","14 ngày"],"Điều 53 khoản 2 điểm a.");
+Q("ld","Lao động nam có vợ sinh con thứ nhất (sinh thường) được nghỉ thai sản:","05 ngày làm việc",["03 ngày","07 ngày","14 ngày"],"Điều 53 khoản 2 điểm a.");
+Q("ld","Lao động nam có vợ sinh con thứ hai (từ 01/7/2026) được nghỉ thai sản:","10 ngày làm việc",["05 ngày làm việc","07 ngày làm việc","14 ngày làm việc"],"Điều 53 khoản 2 điểm c (bản hợp nhất 19/VBHN-VPQH, sửa bởi Luật Dân số 113/2025/QH15).");
 Q("ld","Lao động nam được nghỉ 07 ngày làm việc khi:","Vợ sinh con phải phẫu thuật hoặc sinh con dưới 32 tuần tuổi",["Vợ sinh thường","Vợ sinh đôi","Vợ sinh con thứ ba"],"Điều 53 khoản 2 điểm b.");
 Q("ld","Ngày bắt đầu nghỉ thai sản của lao động nam phải nằm trong khoảng:","60 ngày kể từ ngày vợ sinh con",["15 ngày","30 ngày","90 ngày"],"Điều 53 khoản 3.");
 Q("ld","Trợ cấp thai sản một tháng bằng:","100% bình quân tiền lương đóng BHXH 06 tháng gần nhất trước khi nghỉ",["75% lương tháng cuối","60% lương tháng đầu","50% lương bình quân 12 tháng"],"Điều 59 khoản 1.");

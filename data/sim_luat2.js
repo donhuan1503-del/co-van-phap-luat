@@ -39,13 +39,13 @@ SCEN.push(
    warn:"Làm thêm giờ ban đêm còn cộng 30% và 20% theo Điều 98 khoản 2, 3."};}},
 
 {id:"l_bhxh_thai_san",role:"Chuyên viên nhân sự - lao động",topic:"ld",level:2,make:function(R){
-  var th=R.int(3,12),pt=R.pick(["sinh thường","phải phẫu thuật","sinh đôi"]);
-  var ngay=pt==="sinh thường"?5:(pt==="phải phẫu thuật"?7:10);
+  var th=R.int(3,12),pt=R.pick(["sinh thường (con thứ nhất)","phải phẫu thuật","sinh đôi","sinh con thứ hai (từ 01/7/2026)"]);
+  var ngay=pt.indexOf("thường")>=0?5:(pt==="phải phẫu thuật"?7:10);
   var dk=th>=6;
   return {title:"Chế độ thai sản của lao động nam khi vợ sinh",
    facts:["Anh Nam làm tại "+R.co()+", đã đóng BHXH bắt buộc "+th+" tháng trong 12 tháng liền kề trước khi vợ sinh con.","Vợ "+pt+"."],
    stages:[
-    simMC("Số ngày làm việc được nghỉ hưởng thai sản của anh Nam?",ngay+" ngày làm việc",[(ngay+2)+" ngày",(ngay-2>0?ngay-2:3)+" ngày","14 ngày"],"Điều 53 khoản 2: 05 ngày (thường); 07 ngày (phẫu thuật hoặc dưới 32 tuần); 10 ngày (sinh đôi)."),
+    simMC("Số ngày làm việc được nghỉ hưởng thai sản của anh Nam?",ngay+" ngày làm việc",[(ngay+2)+" ngày",(ngay-2>0?ngay-2:3)+" ngày","14 ngày"],"Điều 53 khoản 2: 05 ngày (thường); 07 ngày (phẫu thuật hoặc dưới 32 tuần); 10 ngày (sinh đôi hoặc sinh con thứ hai theo bản hợp nhất 2026)."),
     simMC("Ngày bắt đầu nghỉ phải trong khoảng nào?","Trong 60 ngày kể từ ngày vợ sinh con",["15 ngày","30 ngày","90 ngày"],"Điều 53 khoản 3."),
     simMC(dk?"Điều kiện đóng BHXH đã đủ chưa?":"Điều kiện đóng BHXH đã đủ chưa?",dk?"Đủ: có từ đủ 06 tháng đóng BHXH bắt buộc trong 12 tháng liền kề":"Chưa đủ: cần từ đủ 06 tháng trong 12 tháng liền kề trước khi sinh",dk?["Chưa đủ vì cần 12 tháng","Chưa đủ vì cần 24 tháng","Không cần điều kiện"]:["Đủ vì có 03 tháng","Đủ vì đang làm việc","Không cần điều kiện"],"Điều 50 khoản 1 điểm g, khoản 2.")],
    law:"Điều 50, 53 Luật BHXH 41/2024/QH15",

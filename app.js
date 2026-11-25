@@ -564,7 +564,49 @@ function simAns(v){
 function simNext(){simCur.i++;simCur.fb=null;simRender();window.scrollTo(0,0);}
 function simSkip(){if(simCur.fb)return;simCur.res.push(null);simCur.i++;simRender();window.scrollTo(0,0);}
 
-var TABS=[["home","Hôm nay",viewHome],["lib","Chuyên đề",viewLib],["chat","Hỏi đáp",viewChat],["quiz","Luyện tập",viewQuiz],["sim","Tình huống",viewSim],["upd","Văn bản mới",viewUpd]];
+/* ---------- Tab: Văn bản gốc (toàn văn bản hợp nhất từ Công báo, tải từng luật khi mở) ---------- */
+var VBDATA={};function VB_LOAD(k,o){VBDATA[k]=o;}
+var VB_GROUP={ke:"Kế toán, kiểm toán",dn:"Doanh nghiệp, thương mại, đầu tư",ld:"Lao động, bảo hiểm xã hội",dd:"Đất đai, nhà ở, công chứng",ds:"Dân sự, hôn nhân gia đình",hs:"Hình sự",td:"Tố tụng dân sự, thi hành án",hc:"Hành chính, khiếu nại, tố cáo",th:"Thuế, phí, ngân sách"};
+var vbKey="",vbQ="",vbOpen={};
+function viewVb(){
+  var idx=window.VB_INDEX||[];
+  var h='<div class="card"><b>Văn bản gốc (toàn văn)</b><div class="law">Văn bản hợp nhất của Văn phòng Quốc hội đăng Công báo Chính phủ (congbao.chinhphu.vn). Chọn luật rồi gõ số điều (ví dụ 35) hoặc từ khóa (ví dụ: báo trước, thử việc). Đã tải một lần thì xem lại được khi không có mạng.</div></div>';
+  var g={};idx.forEach(function(i){(g[i.g]=g[i.g]||[]).push(i);});
+  h+='<div class="row"><select onchange="vbPick(this.value)"><option value="">Chọn luật...</option>'+Object.keys(VB_GROUP).filter(function(k){return g[k];}).map(function(k){return '<optgroup label="'+esc(VB_GROUP[k])+'">'+g[k].map(function(i){return '<option value="'+i.k+'"'+(vbKey===i.k?" selected":"")+'>'+esc(i.t)+' ('+i.c+' điều)</option>';}).join("")+'</optgroup>';}).join("")+'</select></div>';
+  h+='<div class="row"><input id="vbq" placeholder="Số điều hoặc từ khóa" value="'+esc(vbQ)+'" oninput="vbQ=this.value;renderVb()"></div><div id="vblist" style="margin-top:8px"></div>';
+  setTimeout(vbLoad,0);return h;
+}
+function vbPick(k){vbKey=k;vbQ="";vbOpen={};var i=$("vbq");if(i)i.value="";vbLoad();}
+function vbLoad(){
+  var box=$("vblist");if(!box)return;
+  if(!vbKey){renderVb();return;}
+  if(VBDATA[vbKey]){renderVb();return;}
+  box.innerHTML='<div class="card">Đang tải toàn văn...</div>';
+  var s=document.createElement("script");s.src="data/vb/"+vbKey+".js";
+  s.onload=function(){renderVb();};
+  s.onerror=function(){var b=$("vblist");if(b)b.innerHTML='<div class="card">Không tải được (cần mạng lần đầu). Hãy thử lại.</div>';};
+  document.head.appendChild(s);
+}
+function renderVb(){
+  var box=$("vblist");if(!box)return;
+  if(!vbKey){var idx=window.VB_INDEX||[];box.innerHTML='<div class="card">Chọn một luật ở trên để đọc toàn văn. Có '+idx.length+' văn bản.</div>';return;}
+  var D=VBDATA[vbKey];if(!D)return;
+  var q=(vbQ||"").trim(),a=D.a;
+  if(q){
+    var m=q.match(/^(?:điều\s*)?(\d+[a-z]?)$/i);
+    if(m){var n=m[1].toLowerCase();a=a.filter(function(x){return String(x[0]).toLowerCase()===n;});}
+    else{var k=strip(q);a=a.filter(function(x){return strip(x[1]+" "+x[2]).indexOf(k)>=0;});}
+  }
+  var total=a.length;a=a.slice(0,60);
+  var h='<div class="card"><b>'+esc(D.t)+'</b><div class="law">Văn bản hợp nhất số '+esc(D.n)+' · '+total+' điều'+(q?' khớp':'')+(total>60?' (hiện 60 đầu, gõ cụ thể hơn)':'')+'</div></div>';
+  h+=a.map(function(x){
+    var key=vbKey+"_"+x[0],open=vbOpen[key]||(q&&a.length<=3);
+    return '<div class="card"><a href="#" onclick="vbOpen[\''+key+'\']=!vbOpen[\''+key+'\'];renderVb();return false"><b>Điều '+esc(x[0])+'. '+esc(x[1])+'</b></a>'+(open?'<div style="margin-top:6px">'+x[2].split("\n").map(function(p){return '<p>'+esc(p)+'</p>';}).join("")+'</div>':'<div class="law">'+esc(x[2].slice(0,140))+(x[2].length>140?'...':'')+'</div>')+'</div>';
+  }).join("");
+  box.innerHTML=h;
+}
+
+var TABS=[["home","Hôm nay",viewHome],["lib","Chuyên đề",viewLib],["chat","Hỏi đáp",viewChat],["quiz","Luyện tập",viewQuiz],["sim","Tình huống",viewSim],["vb","Văn bản gốc",viewVb],["upd","Văn bản mới",viewUpd]];
 var tab="home";
 function render(){
   var nu=updatesRecent(3).length;
