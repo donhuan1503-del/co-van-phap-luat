@@ -1,0 +1,12 @@
+{
+  "name": "Cố vấn Pháp luật VN",
+  "short_name": "Luật VN",
+  "description": "Pháp luật Việt Nam: dân sự, doanh nghiệp, thương mại, đầu tư, đất đai, lao động, hình sự, hành chính, tố tụng, hôn nhân gia đình, sở hữu trí tuệ, phá sản - học, luyện tập và cập nhật văn bản mới.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f9",
+  "theme_color": "#0b5cad",
+  "lang": "vi",
+  "icons": [{"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}]
+}
